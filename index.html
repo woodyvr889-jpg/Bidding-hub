@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bidding Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="soft-bg">
+
+  <div class="login-container fade-in">
+    <h1>Bidding Hub</h1>
+    <p>Select your name</p>
+
+    <div class="name-grid">
+      <button onclick="selectUser('James')">James</button>
+      <button onclick="selectUser('Uncle Paul')">Uncle Paul</button>
+      <button onclick="selectUser('Grandad Steve')">Grandad Steve</button>
+      <button onclick="selectUser('Grandma Jean')">Grandma Jean</button>
+      <button onclick="selectUser('Dad')">Dad</button>
+      <button onclick="selectUser('Mum')">Mum</button>
+      <button onclick="selectUser('Nannan')">Nannan</button>
+      <button onclick="selectUser('Grandad Darren')">Grandad Darren</button>
+    </div>
+
+    <div id="passcodeBox" class="passcode-box">
+      <input type="password" id="passcodeInput" placeholder="Enter passcode">
+      <button onclick="verifyPasscode()">Enter</button>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
