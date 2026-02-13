@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="soft-bg">
 
-  <div class="login-container fade-in">
+  <div class="login-container">
     <h1>Bidding Hub</h1>
-    <p>Select your name</p>
+    <p>Please select your name</p>
 
     <div class="name-grid">
       <button onclick="selectUser('James')">James</button>
@@ -22,12 +23,15 @@
       <button onclick="selectUser('Grandad Darren')">Grandad Darren</button>
     </div>
 
-    <div id="passcodeBox" class="passcode-box">
+    <div id="passcodeBox" class="passcode-box" style="display:none;">
       <input type="password" id="passcodeInput" placeholder="Enter passcode">
       <button onclick="verifyPasscode()">Enter</button>
     </div>
+
   </div>
 
-<script src="app.js"></script>
+  <!-- IMPORTANT: This MUST match your actual JS filename -->
+  <script src="appscript.js"></script>
+
 </body>
 </html>
