@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Bidding Hub</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <title>Bidding Hub</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #e6f0fa; padding: 20px; }
+    h1, h2 { color: #004080; }
+    section { margin-bottom: 25px; background: #ffffff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    p { margin: 5px 0; }
+    button { padding: 10px 20px; border-radius: 8px; border: none; background-color: #0077cc; color: white; cursor: pointer; font-size: 16px; }
+    button:hover { background-color: #005fa3; }
+  </style>
 </head>
-<body class="soft-bg">
+<body>
 
-<div class="hub-container">
+  <h1 id="welcomeText">Welcome!</h1>
 
-  <header class="top-bar">
-    <h2>Bidding Hub</h2>
-    <button onclick="logout()">Logout</button>
-  </header>
+  <section id="subscriptionsSection">
+    <!-- Subscriptions will load here -->
+  </section>
 
-  <h1 id="welcomeText"></h1>
+  <section id="pointsSection">
+    <!-- Points will load here -->
+  </section>
 
-<section id="subscriptionsSection"></section>
+  <section id="voucherSection">
+    <!-- Vouchers will load here -->
+  </section>
 
-<section id="pointsSection"></section>
+  <button onclick="logout()">Logout</button>
 
-<section id="voucherSection"></section>
-
-</div>
-
-<script src="app.js"></script>
+  <!-- Script at the bottom -->
+  <script src="appscript.js" defer></script>
 </body>
 </html>
