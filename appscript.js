@@ -97,6 +97,11 @@ let selectedUser = null;
 function selectUser(name) {
   selectedUser = name;
 
+  if (!familyData[name]) {
+    alert("User not found.");
+    return;
+  }
+
   if (familyData[name].passcode) {
     document.getElementById("passcodeBox").style.display = "block";
   } else {
