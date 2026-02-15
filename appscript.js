@@ -8,12 +8,12 @@ const familyData = {
     passcode: null,
     subscriptions: [
       {
-        name: "V.I.M. LORD",
+        name: "V.I.M. LORD. To activate your perks, please tell James what perks you want active. Whichever ones are active, shall renew every month at payment.",
         status: "£5/month",
         perks: [
           { name: "Top Priority", desc: "Absolute top priority in all Gorilla Tag events" },
           { name: "All VIM Features", desc: "All VIM features unlocked (no limits)" },
-          { name: "Elite Recognition", desc: "VIM-only recognition — everyone knows you’re elite" },
+          { name: "Elite Recognition", desc: "VIM-only recognition — everyone knows you’re elite. Your name gets put in Group description & group admin role given." },
           { name: "Protection", desc: "Protection from negative effects" },
           { name: "Bonus Advantages", desc: "Bonus advantages in key moments" },
           { name: "Chaos Influence", desc: "Extra influence during chaos rounds" },
@@ -21,7 +21,8 @@ const familyData = {
           { name: "All Past Perks", desc: "Access to all past perks" },
           { name: "Monthly Rewards", desc: "x2 £2 vouchers + x10 lucky blocks every month" },
           { name: "Mod Team Access", desc: "Send announcements about updates to the new website" },
-          { name: "Bonus Bundle", desc: "x1 £2 voucher, x5 lucky blocks, x10,500 points included" }
+          { name: "Bonus Bundle", desc: "x1 £2 voucher, x5 lucky blocks, x10,500 points included" },
+          { name: "Bonus Bundle 2", desc: "5 lucky blocks" }
         ]
       }
     ],
@@ -33,7 +34,7 @@ const familyData = {
     vouchers: [
       { name: "£2 Voucher", status: "Active", expires: "01/05/2026", quantity: 4 },
       { name: "£3 Voucher", status: "Active", expires: "01/04/2026", quantity: 1 },
-      { name: "£3 Voucher", status: "Used on 13/02/2026", expires: null, quantity: 1 }
+      { name: " (REMOVING SOON) £3 Voucher", status: "Used on 13/02/2026", expires: null, quantity: 1 }
     ]
   },
 
@@ -69,7 +70,9 @@ const familyData = {
     passcode: null,
     subscriptions: [],
     points: { place: 6, score: 6000, lastUpdated: "Friday 13th Feb 2026 at 21:00" },
-    vouchers: []
+    vouchers: [
+       { name: "£2 Voucher", status: "Active", expires: "Does not expire, unlimited quantity.", quantity: 0 }
+    ]
   },
 
   "Grandad Darren": {
