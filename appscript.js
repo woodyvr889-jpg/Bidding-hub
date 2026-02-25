@@ -28,68 +28,132 @@ const familyData = {
     ],
     points: {
       place: 1,
-      score: 153650,
+      score: 164650,
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
       { name: "£2 Voucher", status: "Active", expires: "01/05/2026", quantity: 4 },
       { name: "£3 Voucher", status: "Active", expires: "01/04/2026", quantity: 1 },
-      { name: " (REMOVING SOON) £3 Voucher", status: "Used on 13/02/2026", expires: null, quantity: 1 }
+      { name: " (REMOVING SOON) £3 Voucher", status: "Used on 13/02/2026", expires: null, quantity: 1 },
+      { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
     ]
   },
 
   "Grandad Steve": {
     passcode: null,
-    subscriptions: [],
-    points: { place: 2, score: 128550, lastUpdated: "Friday 13th Feb 2026 at 21:00" },
-    vouchers: []
+    subscriptions: [
+      {
+        name: "👑 GOLDEN OWNER TIER (v2)",
+        status: "£10",
+        perks: [
+          { name: "Golden Owner Title", desc: "Official Golden Owner (v2) title" },
+          { name: "Priority Callouts", desc: "Priority callouts at ANY moment — no waiting" },
+          { name: "Power Advantage", desc: "Guaranteed power advantage during a critical event phase" },
+          { name: "Classified Bonus", desc: "Exclusive classified bonus (revealed when activated)" },
+          { name: "Limited Protection", desc: "Limited protection from select negative effects" },
+          { name: "Public Recognition", desc: "Public recognition as the event’s Golden Owner (v2)" }
+        ]
+      }
+    ],
+    points: {
+      place: 2,
+      score: 129050,
+      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+    },
+    vouchers: [
+      { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
+    ]
   },
 
   "Mum": {
     passcode: null,
     subscriptions: [],
-    points: { place: 3, score: 10950, lastUpdated: "Friday 13th Feb 2026 at 21:00" },
-    vouchers: []
+    points: {
+      place: 3,
+      score: 11450,
+      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+    },
+    vouchers: [
+      { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
+    ]
   },
 
   "Dad": {
     passcode: null,
     subscriptions: [],
-    points: { place: 4, score: 9050, lastUpdated: "Friday 13th Feb 2026 at 21:00" },
-    vouchers: []
+    points: {
+      place: 4,
+      score: 9550,
+      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+    },
+    vouchers: [
+      { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
+    ]
   },
 
   "Nannan": {
     passcode: null,
     subscriptions: [],
-    points: { place: 5, score: 6050, lastUpdated: "Friday 13th Feb 2026 at 21:00" },
-    vouchers: []
+    points: {
+      place: 5,
+      score: 6550,
+      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+    },
+    vouchers: [
+      { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
+    ]
   },
 
   "Grandma Jean": {
     passcode: null,
     subscriptions: [],
-    points: { place: 6, score: 6000, lastUpdated: "Friday 13th Feb 2026 at 21:00" },
+    points: {
+      place: 6,
+      score: 6500,
+      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+    },
     vouchers: [
-       { name: "£2 Voucher", status: "Active", expires: "Does not expire, unlimited quantity.", quantity: 0 }
+      { name: "£2 Voucher", status: "Active", expires: "Does not expire, unlimited quantity.", quantity: 0 },
+      { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
     ]
   },
 
   "Grandad Darren": {
     passcode: null,
     subscriptions: [],
-    points: { place: 7, score: 5050, lastUpdated: "Friday 13th Feb 2026 at 21:00" },
-    vouchers: []
+    points: {
+      place: 7,
+      score: 5550,
+      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+    },
+    vouchers: [
+      { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
+    ]
   },
 
   "James": {
     passcode: "7777",
     subscriptions: [],
-    points: { place: "-", score: 0, lastUpdated: "Friday 13th Feb 2026 at 21:00" },
-    vouchers: []
+    points: {
+      place: 8,
+      score: 500,
+      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+    },
+    vouchers: [
+      { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
+    ]
   }
 
 };
+
+/* AUTO FIX LEADERBOARD BASED ON POINTS */
+const sortedUsers = Object.entries(familyData)
+  .sort((a, b) => b[1].points.score - a[1].points.score);
+
+sortedUsers.forEach((user, index) => {
+  familyData[user[0]].points.place = index + 1;
+});
+
 
 /* ===============================
    LOGIN LOGIC
@@ -98,6 +162,7 @@ const familyData = {
 let selectedUser = null;
 
 function selectUser(name) {
+
   selectedUser = name;
 
   if (!familyData[name]) {
@@ -111,9 +176,11 @@ function selectUser(name) {
     localStorage.setItem("loggedInUser", name);
     window.location.href = "hub.html";
   }
+
 }
 
 function verifyPasscode() {
+
   const input = document.getElementById("passcodeInput").value;
 
   if (input === familyData[selectedUser].passcode) {
@@ -122,13 +189,16 @@ function verifyPasscode() {
   } else {
     alert("Wrong passcode");
   }
+
 }
+
 
 /* ===============================
    HUB RENDERING
 ================================= */
 
 if (window.location.pathname.includes("hub.html")) {
+
   const user = localStorage.getItem("loggedInUser");
 
   if (!user) {
@@ -136,24 +206,32 @@ if (window.location.pathname.includes("hub.html")) {
   } else {
     loadHub(user);
   }
+
 }
 
+
 function loadHub(user) {
+
   const data = familyData[user];
 
   document.getElementById("welcomeText").innerText =
     `Welcome, ${user}`;
 
+
   /* SUBSCRIPTIONS */
 
   const subs = document.getElementById("subscriptionsSection");
+
   subs.innerHTML = "<h2>Your Subscriptions</h2>";
 
   if (data.subscriptions.length === 0) {
+
     subs.innerHTML += "<p>No active subscriptions.</p>";
+
   }
 
   data.subscriptions.forEach(sub => {
+
     subs.innerHTML += `
       <div style="margin-top:15px;">
         <strong>${sub.name}</strong> - ${sub.status}
@@ -164,11 +242,14 @@ function loadHub(user) {
         </div>
       </div>
     `;
+
   });
+
 
   /* POINTS */
 
   const points = document.getElementById("pointsSection");
+
   points.innerHTML = `
     <h2>Your Points</h2>
     <p><strong>Leaderboard Place:</strong> ${data.points.place}</p>
@@ -177,16 +258,21 @@ function loadHub(user) {
     <p style="margin-top:10px;">🏅 50 points are added weekly to everyone.</p>
   `;
 
+
   /* VOUCHERS */
 
   const vouchers = document.getElementById("voucherSection");
+
   vouchers.innerHTML = "<h2>Your Vouchers</h2>";
 
   if (data.vouchers.length === 0) {
+
     vouchers.innerHTML += "<p>No vouchers available.</p>";
+
   }
 
   data.vouchers.forEach(v => {
+
     vouchers.innerHTML += `
       <div style="margin-top:10px;">
         <p>
@@ -196,10 +282,16 @@ function loadHub(user) {
         </p>
       </div>
     `;
+
   });
+
 }
 
+
 function logout() {
+
   localStorage.removeItem("loggedInUser");
+
   window.location.href = "index.html";
+
 }
