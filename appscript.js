@@ -27,14 +27,13 @@ const familyData = {
       }
     ],
     points: {
-      place: 1,
+      place: 2,
       score: 164650,
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
       { name: "£2 Voucher", status: "Active", expires: "01/05/2026", quantity: 4 },
       { name: "£3 Voucher", status: "Active", expires: "01/04/2026", quantity: 1 },
-      { name: " (REMOVING SOON) £3 Voucher", status: "Used on 13/02/2026", expires: null, quantity: 1 },
       { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
     ]
   },
@@ -56,8 +55,8 @@ const familyData = {
       }
     ],
     points: {
-      place: 2,
-      score: 129050,
+      place: 1,
+      score: 229050,
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
