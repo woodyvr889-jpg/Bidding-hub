@@ -28,7 +28,7 @@ const familyData = {
     ],
     points: {
       place: 2,
-      score: 164650,
+      score: 164650 + 150000, // Added 150,000 points
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
@@ -56,7 +56,7 @@ const familyData = {
     ],
     points: {
       place: 1,
-      score: 229050,
+      score: 229050 + 150000, // Added 150,000 points
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
@@ -69,7 +69,7 @@ const familyData = {
     subscriptions: [],
     points: {
       place: 3,
-      score: 11450,
+      score: 11450 + 150000,
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
@@ -82,7 +82,7 @@ const familyData = {
     subscriptions: [],
     points: {
       place: 4,
-      score: 9550,
+      score: 9550 + 150000,
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
@@ -95,7 +95,7 @@ const familyData = {
     subscriptions: [],
     points: {
       place: 5,
-      score: 6550,
+      score: 6550 + 150000,
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
@@ -108,7 +108,7 @@ const familyData = {
     subscriptions: [],
     points: {
       place: 6,
-      score: 6500,
+      score: 6500 + 150000,
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
@@ -122,7 +122,7 @@ const familyData = {
     subscriptions: [],
     points: {
       place: 7,
-      score: 5550,
+      score: 5550 + 150000,
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
@@ -135,7 +135,7 @@ const familyData = {
     subscriptions: [],
     points: {
       place: 8,
-      score: 500,
+      score: 500 + 150000,
       lastUpdated: "Friday 13th Feb 2026 at 21:00"
     },
     vouchers: [
