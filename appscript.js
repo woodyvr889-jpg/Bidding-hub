@@ -29,7 +29,7 @@ const familyData = {
     points: {
       place: 2,
       score: 164650 + 150000, // Added 150,000 points
-      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+      lastUpdated: "Saturday 28th February 2026, 13:00"
     },
     vouchers: [
       { name: "£2 Voucher", status: "Active", expires: "01/05/2026", quantity: 4 },
@@ -57,7 +57,7 @@ const familyData = {
     points: {
       place: 1,
       score: 229050 + 150000, // Added 150,000 points
-      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+      lastUpdated: "Saturday 28th February 2026, 13:00"
     },
     vouchers: [
       { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
@@ -70,7 +70,7 @@ const familyData = {
     points: {
       place: 3,
       score: 11450 + 150000,
-      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+      lastUpdated: "Saturday 28th February 2026, 13:00"
     },
     vouchers: [
       { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
@@ -83,7 +83,7 @@ const familyData = {
     points: {
       place: 4,
       score: 9550 + 150000,
-      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+      lastUpdated: "Saturday 28th February 2026, 13:00"
     },
     vouchers: [
       { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
@@ -96,7 +96,7 @@ const familyData = {
     points: {
       place: 5,
       score: 6550 + 150000,
-      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+      lastUpdated: "Saturday 28th February 2026, 13:00"
     },
     vouchers: [
       { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
@@ -109,7 +109,7 @@ const familyData = {
     points: {
       place: 6,
       score: 6500 + 150000,
-      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+      lastUpdated: "Saturday 28th February 2026, 13:00"
     },
     vouchers: [
       { name: "£2 Voucher", status: "Active", expires: "Does not expire, unlimited quantity.", quantity: 0 },
@@ -123,7 +123,7 @@ const familyData = {
     points: {
       place: 7,
       score: 5550 + 150000,
-      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+      lastUpdated: "Saturday 28th February 2026, 13:00"
     },
     vouchers: [
       { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
@@ -134,9 +134,9 @@ const familyData = {
     passcode: "7777",
     subscriptions: [],
     points: {
-      place: 8,
-      score: 500 + 150000,
-      lastUpdated: "Friday 13th Feb 2026 at 21:00"
+      place: 0,
+      score: 0,
+      lastUpdated: "-"
     },
     vouchers: [
       { name: "£1.50 Voucher", status: "Active", expires: "01/06/2026", quantity: 1 }
