@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  background-color: #cde7ff; /* soft baby blue background */
+  background-color: #cde7ff; /* soft baby blue */
   color: #004080;
 }
 
@@ -12,7 +12,7 @@ body {
    BUTTONS
 ================================= */
 button {
-  padding: 14px 20px;
+  padding: 14px 24px;
   font-size: 16px;
   border-radius: 20px;
   border: none;
@@ -52,6 +52,7 @@ button:active {
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 25px;
+  justify-content: center;
 }
 .navbar a {
   text-decoration: none;
@@ -70,12 +71,12 @@ button:active {
 }
 
 /* ===============================
-   SECTIONS (HUB & EVENTS)
+   SECTIONS (HUB, SHOP, EVENTS, ABOUT)
 ================================= */
 section {
   margin-bottom: 25px;
   background: #e3f2ff; /* lighter baby blue */
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   opacity: 0;
@@ -84,7 +85,7 @@ section {
 }
 
 /* ===============================
-   ANIMATIONS
+   FADE-UP ANIMATION
 ================================= */
 .fade-up {
   opacity: 0;
@@ -113,4 +114,6 @@ section {
 ================================= */
 .hub-container {
   padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
