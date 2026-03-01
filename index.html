@@ -13,39 +13,26 @@
     <p>Please select your name</p>
 
     <div class="name-grid">
-      <button data-user="James">James</button>
-      <button data-user="Uncle Paul">Uncle Paul</button>
-      <button data-user="Uncle Lee">Uncle Lee</button>
-      <button data-user="Grandad Steve">Grandad Steve</button>
-      <button data-user="Grandma Jean">Grandma Jean</button>
-      <button data-user="Dad">Dad</button>
-      <button data-user="Mum">Mum</button>
-      <button data-user="Auntie Emily">Auntie Emily</button>
-      <button data-user="Nannan">Nannan</button>
-      <button data-user="Grandad Darren">Grandad Darren</button>
+      <button onclick="selectUser('James')">James</button>
+      <button onclick="selectUser('Uncle Paul')">Uncle Paul</button>
+      <button onclick="selectUser('Uncle Lee')">Uncle Lee</button>
+      <button onclick="selectUser('Grandad Steve')">Grandad Steve</button>
+      <button onclick="selectUser('Grandma Jean')">Grandma Jean</button>
+      <button onclick="selectUser('Dad')">Dad</button>
+      <button onclick="selectUser('Mum')">Mum</button>
+      <button onclick="selectUser('Auntie Emily')">Auntie Emily</button>
+      <button onclick="selectUser('Nannan')">Nannan</button>
+      <button onclick="selectUser('Grandad Darren')">Grandad Darren</button>
     </div>
 
     <div id="passcodeBox" class="passcode-box" style="display:none;">
       <input type="password" id="passcodeInput" placeholder="Enter passcode">
-      <button id="verifyBtn">Enter</button>
+      <button onclick="verifyPasscode()">Enter</button>
     </div>
   </div>
 
-  <!-- Load JS at the bottom to ensure buttons work -->
+  <!-- Load your JS here at the bottom -->
   <script src="appscript.js"></script>
-  <script>
-    // Attach click events to buttons
-    document.querySelectorAll(".name-grid button").forEach(btn => {
-      btn.addEventListener("click", () => {
-        selectUser(btn.dataset.user);
-      });
-    });
-
-    // Attach verify button
-    document.getElementById("verifyBtn").addEventListener("click", () => {
-      verifyPasscode();
-    });
-  </script>
 
 </body>
 </html>
