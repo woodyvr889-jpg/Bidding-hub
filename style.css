@@ -1,105 +1,108 @@
 /* ===============================
-   BIDDING SYNC BABY BLUE THEME
+   GLOBAL STYLES
 ================================= */
-
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #eaf6ff;
-  color: #1a2a3a;
+  font-family: system-ui;
+  background-color: #cde7ff; /* soft baby blue background */
+  color: #004080;
 }
 
-/* NAV BAR */
-
-.navbar {
-  position: sticky;
-  top: 10px;
-  margin: 10px;
-  padding: 12px;
-  background: white;
-  border-radius: 50px;
-  display: flex;
-  justify-content: space-around;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  z-index: 1000;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #5bb8ff;
-  font-weight: bold;
-  padding: 8px 16px;
+/* ===============================
+   BUTTONS
+================================= */
+button {
+  padding: 16px;
+  font-size: 16px;
   border-radius: 20px;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-  background: #dff1ff;
-}
-
-.navbar a.active {
-  background: #8fd0ff;
-  color: white;
-}
-
-/* PAGE CONTAINER */
-
-.container {
-  padding: 20px;
-}
-
-/* CARDS */
-
-.card {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(90, 160, 255, 0.15);
-
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.card.visible {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(90,160,255,0.25);
-}
-
-/* BUTTONS */
-
-.button {
-  background: #5bb8ff;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 15px;
   border: none;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+  transition: all 0.2s ease;
 }
-
-.button:hover {
-  background: #3ea6f5;
+button:hover {
+  background-color: #d0ebff;
   transform: translateY(-2px);
 }
+button:active {
+  transform: scale(0.97);
+}
 
-/* TITLE */
+/* ===============================
+   LOGIN PAGE
+================================= */
+.login-container {
+  padding: 40px 20px;
+  text-align: center;
+}
+.name-grid {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
 
-.title {
-  font-size: 28px;
-  font-weight: bold;
+/* ===============================
+   NAVBAR
+================================= */
+.navbar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.navbar a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: #0077cc;
+  color: #fff;
+  transition: 0.2s ease;
+}
+.navbar a:hover {
+  background: #005fa3;
+}
+.navbar a.active {
+  background: #003f73;
+}
+
+/* ===============================
+   SECTIONS (HUB & EVENTS)
+================================= */
+section {
+  margin-bottom: 25px;
+  background: #e3f2ff; /* lighter baby blue */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+}
+
+/* ===============================
+   ANIMATIONS
+================================= */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   INPUTS
+================================= */
+.passcode-box input {
+  padding: 14px;
+  border-radius: 15px;
+  border: none;
+  width: 80%;
   margin-bottom: 10px;
 }
 
-/* SUBTEXT */
-
-.sub {
-  color: #6b8ca6;
+/* ===============================
+   HUB CONTAINER
+================================= */
+.hub-container {
+  padding: 20px;
 }
