@@ -217,6 +217,32 @@ function verifyPasscode() {
 
 }
 
+/* ===============================
+   SCROLL ANIMATIONS
+================================= */
+
+const cards = document.querySelectorAll(".card");
+
+function revealCards() {
+
+  const trigger = window.innerHeight * 0.9;
+
+  cards.forEach(card => {
+
+    const cardTop = card.getBoundingClientRect().top;
+
+    if(cardTop < trigger) {
+      card.classList.add("visible");
+    }
+
+  });
+
+}
+
+window.addEventListener("scroll", revealCards);
+
+window.addEventListener("load", revealCards);
+
 
 /* ===============================
    HUB RENDERING
