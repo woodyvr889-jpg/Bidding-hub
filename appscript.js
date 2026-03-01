@@ -43,7 +43,7 @@ const familyData = {
     subscriptions: [],
     points: {
       place: 9,
-      score: 150000 + 100000,,
+      score: 150000 + 100000,
       lastUpdated: "SSunday 1st March 2026, 12:55"
     },
     vouchers: [
